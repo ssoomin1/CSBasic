@@ -78,7 +78,7 @@ namespace CSBasic
             Console.WriteLine('A' + 'E'); //134 문자열만 계산해줄 수 있음 (정수+정수) 덧셈연산자 사용
             Console.WriteLine("ABC" + 'E');
             Console.WriteLine("ABC"[2]);
-            Console.WriteLine("ABC"[3]); //IndexOutOfRangeException 발생
+          //  Console.WriteLine("ABC"[3]); //IndexOutOfRangeException 발생
 
             //bool
             bool isPlay = true;
@@ -118,6 +118,35 @@ namespace CSBasic
             Console.WriteLine(3 < i && i < 8);
             Console.WriteLine(3 < i || i> 8);
             Console.WriteLine(i<3 || 8<i);
+
+            //21억은 기억해두기
+            int a = 213738640;
+            int b = 10000000;
+            Console.WriteLine((long)a + b);
+
+            Console.WriteLine(int.MinValue);
+            Console.WriteLine(int.MaxValue);
+            Console.WriteLine(double.MaxValue);
+
+            Console.WriteLine(-int.MaxValue);
+            //Console.WriteLine(-int.MinValue);
+
+            Console.WriteLine(3L);
+            //Console.WriteLine(3l); //1과 헷갈리니까 대문자로 쓰는 것이 좋다. 
+
+            Console.WriteLine(3);
+            Console.WriteLine(3.0);
+            char c = 'a';
+            Console.WriteLine(c);
+
+            //sizeof(자료형)
+            Console.WriteLine("int: "+sizeof(int));
+            Console.WriteLine("long: " + sizeof(long));
+            Console.WriteLine("float: " + sizeof(float));
+            Console.WriteLine("double: " + sizeof(double));
+            Console.WriteLine("char: " + sizeof(char)); //c#에서는 2바이트
+
+            bool IsLive = true;
         }
     }
 }
