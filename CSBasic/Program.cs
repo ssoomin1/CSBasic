@@ -10,6 +10,8 @@ namespace CSBasic
     {
         //var 키워드는 지역변수로만 사용 가능
         //var name="신수민"  <== 에러난다. var의 사용범위
+       // var something = "hehe"; =>지역변수에만 사용가능
+
         static void Main(string[] args)
         {
             //keyword
@@ -184,6 +186,14 @@ namespace CSBasic
             Console.WriteLine(_double.GetType()) ;
             Console.WriteLine(_char.GetType());
             Console.WriteLine(_string.GetType());
+
+            Console.WriteLine("==================");
+            var somea = "무엇을 쓰는게 좋을까요??";
+            var someb = 19;
+            var somec = 3.141592;
+            Console.WriteLine(somea.GetType());
+            Console.WriteLine(someb.GetType());
+            Console.WriteLine(somec.GetType());
         }
     }
 }
