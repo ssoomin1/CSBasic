@@ -147,6 +147,14 @@ namespace CSBasic
             Console.WriteLine("char: " + sizeof(char)); //c#에서는 2바이트
 
             bool IsLive = true;
+
+            //증감연산자 - 섞어서 쓸 경우
+            // 전위, 후위에 따라서 출력 값이 변함
+            int num = 10;
+            Console.WriteLine(num++);
+            Console.WriteLine(++num);
+            Console.WriteLine(num--);
+            Console.WriteLine(--num);
         }
     }
 }
