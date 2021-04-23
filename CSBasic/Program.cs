@@ -194,6 +194,18 @@ namespace CSBasic
             Console.WriteLine(somea.GetType());
             Console.WriteLine(someb.GetType());
             Console.WriteLine(somec.GetType());
+
+            bool isLoop = true;
+            string input;
+            while (isLoop)
+            {
+                Console.Write("입력> ");
+                input = Console.ReadLine();
+                if (input.Equals("q"))
+                    break;
+                else
+                    Console.WriteLine(input);
+            }
         }
     }
 }
