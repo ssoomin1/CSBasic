@@ -6,6 +6,18 @@ using System.Threading.Tasks;
 
 namespace CSBasic4
 {
+    class MyMath
+    {
+        int scmenumber = 42;
+        public static double PI = 3.141592;
+        public static void Greeting()
+        {
+            //클래스변수에서 일반 멤버변수 쓸 수 없다.
+            //인스턴스 변수, 메소드-> 만들때 생성됨 ->클래스 변수 내에서 접근이 안됨 시험문제**
+            //Console.WriteLine(scmenumber);
+            Console.WriteLine("Greeting!");
+        }
+    }
     class Car
     {
         //기본 접근제어자가 private이다. 
@@ -24,12 +36,10 @@ namespace CSBasic4
             this.outTime = DateTime.Now;
         }
     }
+
     class Program
     {
-        static void Main(string[] args)
-        {
-            //재활용을 못하기때문에 클래스안에 클래스 만드는 것은 추천 X
-            class FirstClass
+        class FirstClass
         {
 
         }
@@ -37,6 +47,10 @@ namespace CSBasic4
         {
 
         }
+        static void Main(string[] args)
+        {
+            //재활용을 못하기때문에 
+
             Car[] cars = new Car[10];
 
             Random random = new Random();
@@ -69,6 +83,18 @@ namespace CSBasic4
             Console.WriteLine(Math.Round(52.563));
             Console.WriteLine(Math.Max(52,273));
             Console.WriteLine(Math.Min(52,263));
+
+            Product product = new Product();
+            product.name = "감자";
+            product.price = 2000;
+
+            Console.WriteLine(product.name + " : " + product.price + "원");
+
+            Product productA = new Product() { name = "짜장면", price = 5500 }; //생성자 만들어주지 않아도 이렇게 하면 됨
+            Product productB = new Product() { name = "짬뽕", price = 8000 };
+            Product productC = new Product() { name = "탕수육"};
+            Product productD = new Product() { price = 999999999 };
+            Product productE = new Product() { price = 3000, name="양장피" };
         }
     }
 }
