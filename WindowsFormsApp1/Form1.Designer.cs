@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,13 +29,55 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.button1 = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(124, 229);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(295, 68);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "마음대로합니다!";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(428, 490);
+            this.trackBar1.Maximum = 100;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(90, 45);
+            this.trackBar1.TabIndex = 1;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // FormMain
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.Color.Ivory;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.denimalz;
+            this.ClientSize = new System.Drawing.Size(530, 547);
+            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.button1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FormMain";
+            this.Text = "내 프로그램";
+            this.TransparencyKey = System.Drawing.Color.Tomato;
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }
 
