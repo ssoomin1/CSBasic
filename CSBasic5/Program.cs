@@ -14,19 +14,43 @@ namespace CSBasic5
             get { return width; }
             set
             {
-                if (value > 0)
-                {
-                    this.width = value;
-                }
-                else
-                {
-                    Console.WriteLine("양수만 입력 가능!");
-                }
+                if(value>0) { width = value; }
+                else { Console.WriteLine("너비는 자연수를 입력해주세요"); }
+            }
+        }
+        private int height;
+        public int Height
+        {
+            get { return height; }
+            set
+            {
+                if (value > 0) { height = value; }
+                else { Console.WriteLine("높이는 자연수를 입력해주세요"); }
             }
         }
 
+        //생성자
+        public Box(int width,int height)
+        {
+            Width = width;
+            Height = height;
+        }
+
+        //인스턴스 메서드
+        public int Area() { return this.width * this.height; }
+
+    }
+
         class Program
     {
+        class Test
+        {
+            public int value = 10;
+        }
+         static void Change(Test input)
+        {
+            input.value = 20;
+        }
         class MethodExample
         {
             public int Power(int x)
@@ -78,27 +102,34 @@ namespace CSBasic5
 
             List<int> list = new List<int>();
 
-            MethodExample me = new MethodExample();
+            Box box = new Box(10, 10);
+
+            Test test = new Test();
+            test.value = 10;
+            Change(test);
+
+            Console.WriteLine(test.value);
+           /* MethodExample me = new MethodExample();
             Console.WriteLine(me.Power(10));
             Console.WriteLine(me.Power(20));
             Console.WriteLine(me.Multi(52, 273));
-            Console.WriteLine(me.Multi(103, 32));
+            Console.WriteLine(me.Multi(103, 32));*/
 
-            Test test = new Test();
-            Console.WriteLine(test.Sum(1, 100)); //1부터 100까지 합
+            //Test test = new Test();
+            //Console.WriteLine(test.Sum(1, 100)); //1부터 100까지 합
 
-            Console.WriteLine(MyMath.Abs(52));
-            Console.WriteLine(MyMath.Abs(-273));
+            //Console.WriteLine(MyMath.Abs(52));
+            //Console.WriteLine(MyMath.Abs(-273));
 
             //클래스 메서드에서는 인스턴스 변수/메서드 접근 불가
             //객체를 만들어 접근해야한다.
             //Console.WriteLine(instanceVariable);
             //instanceMethod();
-            Program p = new Program();
-            Console.WriteLine(p.instanceVariable);
-            p.instanceMethod();
+            //Program p = new Program();
+            //Console.WriteLine(p.instanceVariable);
+            //p.instanceMethod();
 
-            Console.WriteLine(MyMath.Abs(52));
+            /*Console.WriteLine(MyMath.Abs(52));
             Console.WriteLine(MyMath.Abs(-273));
             Console.WriteLine(MyMath.Abs(52.273));
             Console.WriteLine(MyMath.Abs(214712340385872)); //마우스 오버해서 타입 확인하기
@@ -131,12 +162,12 @@ namespace CSBasic5
             t.value = 30;
             TestSome.Change(t);
             Console.WriteLine(t.value);
-            Console.WriteLine(Fibonacci.Get(10));
+            Console.WriteLine(Fibonacci.Get(10));*/
 
 
         }
 
-        class Fibonacci
+       /* class Fibonacci
         {
             public static int count = 0;
             public static long Get(int i)
@@ -155,6 +186,6 @@ namespace CSBasic5
                         return InsufficientMemoryException[i];
                     }
             }
-        }
+        }*/
     }
 }
